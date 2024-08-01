@@ -43,7 +43,8 @@
 	}
 
 	.container-small {
-        width: 70%; 
+        width: 50%;
+        min-width: 700px;
     }
 
     .dim-bg-img {
