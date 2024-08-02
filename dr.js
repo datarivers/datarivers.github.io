@@ -1,7 +1,7 @@
 
 
 $(document).ready(function() {
-      $("#dr-navbar").html(`
+      /*$("#dr-navbar").html(`
         <nav class="navbar navbar-expand-lg" style="background-color: #686868 ;">
           <div class="container-fluid ">
             <a class="navbar-brand text-light fs-5" href="/">DATA RIVER</a>
@@ -31,7 +31,7 @@ $(document).ready(function() {
             </div>
           </div>
         </nav>
-        `);
+        `);*/
 
       $("#more-decisions").click(function() {
         $("#modal-title").html(`Decision Prediction`); 
