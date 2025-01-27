@@ -133,6 +133,52 @@
     opacity: 0.8;
 }
 
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.service-icon {
+    font-size: 2rem;
+    color: #1e4d8c;
+    margin-bottom: 1.5rem;
+}
+
+.service-title {
+    color: #1e4d8c;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #4a5568;
+}
+
+.service-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #4fd1c5;
+}
+
     </style>
   </head>
   <body class="main-body">
@@ -174,65 +220,54 @@
 </div>
 
       <div class="service-section">
-        <h1 class="dr-header-font">What services does Data River provide?</h1>
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="list-unstyled">
-              <li class="mb-4">
-                <h5 class="mb-3">Building software components to consume data and produce smart business decisions</h5>
-                <div class="ps-4">
-                  <p class="mb-2">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Automated data processing systems that convert your raw business data into actionable insights, saving hours of manual analysis
-                  </p>
-                  <p class="mb-2">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Custom dashboards and reporting tools that give you real-time visibility into your business performance metrics
-                  </p>
-                  <p class="mb-2">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    AI-powered decision engines that learn from your historical data to make intelligent recommendations
-                  </p>
+    <h1 class="dr-header-font">Our Services</h1>
+    <div class="row g-4">
+        <!-- Smart Business Decisions Card -->
+        <div class="col-lg-4">
+            <div class="service-card h-100">
+                <div class="service-icon">
+                    <i class="bi bi-graph-up-arrow"></i>
                 </div>
-              </li>
-              <li class="mb-4">
-                <h5 class="mb-3">Protecting and securing data repositories with sensitive business insights</h5>
-                <div class="ps-4">
-                  <p class="mb-2">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Enterprise-grade encryption systems that keep your valuable business data safe from unauthorized access
-                  </p>
-                  <p class="mb-2">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Advanced access control mechanisms that ensure only authorized personnel can view sensitive information
-                  </p>
-                  <p class="mb-2">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Regular security audits and compliance checks to maintain the highest standards of data protection
-                  </p>
-                </div>
-              </li>
-              <li class="mb-4">
-                <h5 class="mb-3">Analyzing and mining business data for influencing business decisions</h5>
-                <div class="ps-4">
-                  <p class="mb-2">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Advanced analytics tools that uncover hidden patterns and trends in your customer behavior and sales data
-                  </p>
-                  <p class="mb-2">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Predictive modeling capabilities that help you forecast market trends and optimize inventory management
-                  </p>
-                  <p class="mb-2">
-                    <i class="bi bi-check-circle-fill text-success me-2"></i>
-                    Custom reporting solutions that transform complex data into clear, actionable business strategies
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
+                <h3 class="service-title">Smart Business Decisions</h3>
+                <ul class="service-list">
+                    <li>Automated data processing systems</li>
+                    <li>Real-time performance dashboards</li>
+                    <li>AI-powered decision engines</li>
+                </ul>
+            </div>
         </div>
-      </div>
+
+        <!-- Data Security Card -->
+        <div class="col-lg-4">
+            <div class="service-card h-100">
+                <div class="service-icon">
+                    <i class="bi bi-shield-lock"></i>
+                </div>
+                <h3 class="service-title">Data Security</h3>
+                <ul class="service-list">
+                    <li>Enterprise-grade encryption</li>
+                    <li>Advanced access control</li>
+                    <li>Regular security audits</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Data Analytics Card -->
+        <div class="col-lg-4">
+            <div class="service-card h-100">
+                <div class="service-icon">
+                    <i class="bi bi-bar-chart"></i>
+                </div>
+                <h3 class="service-title">Data Analytics</h3>
+                <ul class="service-list">
+                    <li>Pattern & trend analysis</li>
+                    <li>Predictive modeling</li>
+                    <li>Custom reporting solutions</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 
       <div class="service-section">
