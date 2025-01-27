@@ -1,0 +1,284 @@
+/* Base styles */
+
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+  background: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-body {
+  /* Subtle gradient background */
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+/* Add a subtle pattern overlay */
+.main-body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(79, 209, 197, 0.05) 2%, transparent 0%),
+    radial-gradient(circle at 75px 75px, rgba(30, 77, 140, 0.05) 2%, transparent 0%);
+  background-size: 100px 100px;
+  pointer-events: none;
+}
+
+/* Optional: Add a soft blue tint to the top */
+.main-body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  background: linear-gradient(180deg, 
+    rgba(30, 77, 140, 0.03) 0%,
+    transparent 100%);
+  pointer-events: none;
+}
+/* Color variables */
+:root {
+  --primary-gradient: linear-gradient(135deg, #1e4d8c 0%, #2c619e 50%, #3498db 100%);
+  --secondary-gradient: linear-gradient(135deg, #4fd1c5 0%, #38b2ac 100%);
+  --accent-color: #4fd1c5;
+  --hover-accent: #38b2ac;
+}
+
+/* Typography */
+.dr-header-font {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.dr-header-font::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--secondary-gradient);
+  border-radius: 2px;
+}
+
+.dr-p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #212529;
+  margin-bottom: 1.5rem;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.logo-wll {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e4d8c;
+  margin-left: 0.5rem;
+  opacity: 0.8;
+}
+
+/* Sections */
+.jumbotron {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.service-section {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin-bottom: 2rem;
+}
+
+/* Service Cards */
+.service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--secondary-gradient);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Service Icons and Lists */
+.service-icon {
+  font-size: 2.5rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.service-title {
+  color: #1e4d8c;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.8rem;
+  position: relative;
+  color: #4a5568;
+  transition: transform 0.2s ease;
+}
+
+.service-list li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  transition: transform 0.2s ease;
+}
+
+.service-list li:hover {
+  transform: translateX(5px);
+}
+
+.service-list li:hover::before {
+  transform: translateX(3px);
+  color: var(--hover-accent);
+}
+
+/* Form Elements */
+.form-control, .form-select {
+  background-color: #F3F4F6;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: white;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(79, 209, 197, 0.2);
+}
+
+/* Buttons */
+.btn-outline-primary {
+  background: linear-gradient(to right, var(--accent-color) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: #1e4d8c;
+  border: 2px solid var(--accent-color);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn-outline-primary:hover {
+  background-position: left bottom;
+  color: white;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary:active {
+  transform: translateY(1px);
+}
+
+/* Read More Section */
+.read-more-section {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.read-more-link {
+  display: inline-flex;
+  align-items: center;
+  color: #1e4d8c;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: linear-gradient(to right, rgba(79, 209, 197, 0.1) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease;
+}
+
+.read-more-link:hover {
+  background-position: left bottom;
+  color: var(--accent-color);
+}
+
+.read-more-link .link-text {
+  margin-right: 0.5rem;
+}
+
+.read-more-link .arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.read-more-link:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
