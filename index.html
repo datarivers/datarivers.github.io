@@ -10,6 +10,13 @@
       body {
         font-family: 'Inter', sans-serif;
       }
+
+      .navbar {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
       .main-body {
         background-color: #f8f9fa;
       }
@@ -108,20 +115,35 @@
       .read-more-link:hover .arrow-icon {
           transform: translateX(4px);
       }
+
+      .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(120deg, #1e4d8c, #2c619e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.logo-wll {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1e4d8c;
+    margin-left: 0.5rem;
+    opacity: 0.8;
+}
+
     </style>
   </head>
   <body class="main-body">
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <div class="d-flex align-items-baseline">
-            <span style="font-size: 1.8rem; font-weight: 700; background: linear-gradient(120deg, #1e4d8c, #2c619e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px;">
-              DATA RIVERS
-              WLL KUWAIT
-          </div>
+    <div class="container">
+        <a href="#" style="text-decoration: none;">
+            <span class="logo">Data River</span>
+            <span class="logo-wll">WLL</span>
         </a>
-      </div>
-    </nav>
+    </div>
+</nav>
     
     <div class="container">
       <div class="jumbotron">
