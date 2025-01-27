@@ -5,93 +5,329 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data River WLL - Building Data-Intensive Systems</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="dr.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .main-body {
+        background-color: #f8f9fa;
+      }
+      .dr-header-font {
+        color: #1e4d8c;  /* Deep royal blue - represents trust, reliability, and professionalism */
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        transition: color 0.3s ease;
+      }
+      .dr-header-font:hover {
+        color: #2c619e;  /* Slightly lighter blue on hover for interactivity */
+      }
+      .display-4 {
+        background: linear-gradient(45deg, #1e4d8c, #2c619e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .dr-p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #212529;
+        margin-bottom: 1.5rem;
+      }
+      .jumbotron {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+      .service-section {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        margin-bottom: 2rem;
+      }
+      .btn-outline-primary {
+        color: #1e4d8c;
+        border-color: #1e4d8c;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        font-weight: 500;
+        border-radius: 4px;
+      }
+      .btn-outline-primary:hover {
+        background-color: #1e4d8c;
+        color: white;
+        border-color: #1e4d8c;
+        box-shadow: 0 2px 4px rgba(30, 77, 140, 0.2);
+      }
+      .form-control, .form-select {
+        background-color: #F3F4F6;
+        border: none;
+      }
+      .form-control:focus, .form-select:focus {
+        background-color: #F3F4F6;
+        border: none;
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+      }
+      .btn-outline-primary:active {
+        transform: translateY(1px);
+      }
 
+      .read-more-section {
+          margin-top: 2rem;
+          text-align: right;
+      }
 
+      .read-more-link {
+          display: inline-flex;
+          align-items: center;
+          color: #1e4d8c;
+          text-decoration: none;
+          font-weight: 500;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          transition: all 0.3s ease;
+      }
+
+      .read-more-link:hover {
+          background: rgba(30, 77, 140, 0.1);
+          color: #2c619e;
+      }
+
+      .read-more-link .link-text {
+          margin-right: 0.5rem;
+      }
+
+      .read-more-link .arrow-icon {
+          transition: transform 0.3s ease;
+      }
+
+      .read-more-link:hover .arrow-icon {
+          transform: translateX(4px);
+      }
+    </style>
   </head>
   <body class="main-body">
-  	<div id="dr-navbar"></div>
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <div class="d-flex align-items-baseline">
+            <span style="font-size: 1.8rem; font-weight: 700; background: linear-gradient(120deg, #1e4d8c, #2c619e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.5px;">
+              DATA RIVERS
+              WLL KUWAIT
+          </div>
+        </a>
+      </div>
+    </nav>
     
-	<div class="container-sm">
-			
-			
-
-			<div class="jumbotron">
-			  <h1 class="dr-header-font display-4" style="margin-top: 10px">
-				What is Data River? 
-			</h1>
-			  <p class="lead">Data River WLL is a data-focused software
-			  company in Kuwait.</p>
-			  <hr class="my-4">
-			  <p class="dr-p">
-				For those entrepreneurs with the coolest ideas who are eager to study and learn from
-				their data, Data River (WLL, Kuwait) provides the state-of-the-art tools to analyze, understand,
-				and incorporate raw business data into data-intensive systems that can automatically 
-				make smart decisions and significantly improve business output. 
-			</p>
-			</div>
-
-			<h1 class="dr-header-font" style="margin-top: 10px; margin-bottom: 20px">
-				What services does Data River provide? 
-			</h1>
-
-			<p class="dr-p">Building software components to consume data and produce smart business decisions.</p>
-			<p class="dr-p">Protecting and securing data repositories with sensitive business insights.</p>
-			<p class="dr-p">Analyzing and mining business data for influencing business decisions.</p>
-
-
-			<h1 class="dr-header-font" style="margin-top: 10px">
-				Who works at Data River? 
-			</h1>
-			<p class="dr-p">
-				Data River is operated by experienced and highly educated computer scientists with
-				industry and academic backgrounds in software development, software testing, machine learning,
-				computer security and privacy. 
-			</p>
-			<h1 class="dr-header-font" style="margin-top: 10px">
-				How can we get in touch?
-			</h1>
-			<p class="dr-p">
-				We are happy to talk about our business and ways we can work with you to improve
-				your profits using our data-intensive systems. 
-				If you are interested, <a href="https://forms.gle/581vg9wwmuKtt4Ak7">submit the contact form</a> (yes, we will look at it) and
-				we will be in touch as soon as possible.
-			</p>
-			<div style="margin-top: 100px"></div>
-	</div>
-
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 id="modal-title" class="modal-title" id="exampleModalLongTitle">
-        	
-        </h5>
-        
-      </div>
-      <div id="modal-text" class="modal-body">
-        
-      </div>
-      <div class="modal-footer">
-        <button id="more-decisions-close" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="dr-header-font">Transform Your Business with Data</h1>
+        <p class="lead">Data River WLL helps small business owners in Kuwait harness the power of their data.</p>
+        <hr class="my-4">
+        <p class="dr-p">
+          Transform your business insights into growth opportunities. We turn your valuable business data into automated, 
+          data-driven decisions that boost your bottom line – all while keeping your sensitive information protected. 
+          Our state-of-the-art systems make advanced data analysis accessible and actionable, giving your business 
+          the competitive edge it needs. Whether you're looking to understand customer patterns, optimize operations, 
+          or secure your business intelligence, Data River provides the expert solutions you need without the 
+          enterprise-level complexity.
+        </p>
+        <div class="read-more-section">
+    <a href="about.html" class="read-more-link me-4">
+        <span class="link-text">Learn More About Data River</span>
+        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+    </a>
+    <a href="coffee.html" class="read-more-link">
+        <span class="link-text">Try Our Coffee Shop Inventory Predictor</span>
+        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+    </a>
 </div>
 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+      <div class="service-section">
+        <h1 class="dr-header-font">What services does Data River provide?</h1>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="list-unstyled">
+              <li class="mb-4">
+                <h5 class="mb-3">Building software components to consume data and produce smart business decisions</h5>
+                <div class="ps-4">
+                  <p class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Automated data processing systems that convert your raw business data into actionable insights, saving hours of manual analysis
+                  </p>
+                  <p class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Custom dashboards and reporting tools that give you real-time visibility into your business performance metrics
+                  </p>
+                  <p class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    AI-powered decision engines that learn from your historical data to make intelligent recommendations
+                  </p>
+                </div>
+              </li>
+              <li class="mb-4">
+                <h5 class="mb-3">Protecting and securing data repositories with sensitive business insights</h5>
+                <div class="ps-4">
+                  <p class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Enterprise-grade encryption systems that keep your valuable business data safe from unauthorized access
+                  </p>
+                  <p class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Advanced access control mechanisms that ensure only authorized personnel can view sensitive information
+                  </p>
+                  <p class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Regular security audits and compliance checks to maintain the highest standards of data protection
+                  </p>
+                </div>
+              </li>
+              <li class="mb-4">
+                <h5 class="mb-3">Analyzing and mining business data for influencing business decisions</h5>
+                <div class="ps-4">
+                  <p class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Advanced analytics tools that uncover hidden patterns and trends in your customer behavior and sales data
+                  </p>
+                  <p class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Predictive modeling capabilities that help you forecast market trends and optimize inventory management
+                  </p>
+                  <p class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    Custom reporting solutions that transform complex data into clear, actionable business strategies
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
 
-  <script src="dr.js">
-		</script>
+      <div class="service-section">
+        <h1 class="dr-header-font">Let's Transform Your Data Journey</h1>
+        <p class="dr-p">
+          Ready to unlock the full potential of your business data? Our team of experts is eager to understand 
+          your unique challenges and craft a customized solution that drives real results.
+        </p>
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+              <input type="hidden" name="access_key" value="8fcdb8b4-58d3-4e7b-9e1c-98c70cfbc556">
+              <input type="hidden" name="subject" value="New Contact Form Submission">
+              
+              
+              
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="company" class="form-label">Company Name</label>
+                  <input type="text" class="form-control" id="company" name="company" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" required 
+                    pattern="[0-9+\s\-()]{8,}"
+                    title="Please enter a valid phone number (minimum 8 digits)">
+                </div>
+                <div class="col-12">
+                  <label for="interest" class="form-label">I'm interested in:</label>
+                  <select class="form-select" id="interest" name="interest" required>
+                    <option value="" selected disabled>Choose a service...</option>
+                    <option value="data-analysis">Data Analysis & Mining</option>
+                    <option value="security">Data Security & Protection</option>
+                    <option value="automation">Data Automation Solutions</option>
+                    <option value="other">Other Services</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Tell us about your needs</label>
+                  <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-outline-primary btn-lg px-4">
+                    Start Your Data Journey
+                  </button>
+                  <p class="text-muted mt-2 mb-0"><small>We typically respond within 24 hours</small></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <script>
+      // Form validation and submission handling
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        
+        form.addEventListener('submit', function(e) {
+          if (!form.checkValidity()) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        });
 
-   
-
+        // Handle form submission
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const originalText = submitBtn.innerHTML;
+          
+          try {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending...';
+            
+            const formData = new FormData(form);
+            const response = await fetch(form.action, {
+              method: 'POST',
+              body: formData
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+              // Show success message
+              form.innerHTML = '<div class="alert alert-success">Thank you for contacting us! We will get back to you soon.</div>';
+            } else {
+              throw new Error('Submission failed');
+            }
+          } catch (error) {
+            // Show error message
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'alert alert-danger mt-3';
+            errorDiv.innerHTML = 'Sorry, there was an error submitting the form. Please try again.';
+            form.appendChild(errorDiv);
+            
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
